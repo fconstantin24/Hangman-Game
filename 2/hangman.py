@@ -83,9 +83,6 @@ def get_available_letters(letters_guessed):
 def hangman(secret_word):
     '''
     secret_word: string, the secret word to guess.
-    
-    Starts up an interactive game of Hangman.
-    
     '''
     print ("Welcome to the game Hangman!")
    
@@ -94,10 +91,7 @@ def hangman(secret_word):
     L = []
     for j in range (0, 6) :
         print(secret_word)
-       # for i in range (0, 3) :
-          #  if input() != string.ascii_lowercase:
-          #      print ("You have", 3-i, "warnings left.")
-        #j += 1
+   
         print ("You have", 6-j, "guesses left.")
         print("Please guess a letter:")
         letter = input()
@@ -113,7 +107,6 @@ def hangman(secret_word):
      
         get_guessed_word(secret_word, L)
         print ("Available letters: ")
-       # L.append(letter)
         print (''.join(get_available_letters(L)))
         print("------------")
 
